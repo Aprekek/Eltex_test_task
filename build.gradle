@@ -1,7 +1,23 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-plugins {
-	id 'com.android.application' version '7.1.1' apply false
-	id 'com.android.library' version '7.1.1' apply false
+buildscript {
+	apply from: 'build_system/dependencies.gradle'
+	apply from: 'build_system/versions.gradle'
+	apply from: 'build_system/plugins.gradle'
+
+	repositories {
+		mavenCentral()
+		google()
+	}
+
+	dependencies {
+		classpath Dependencies.GRADLE
+	}
+}
+
+allprojects {
+	repositories {
+		mavenCentral()
+		google()
+	}
 }
 
 task clean(type: Delete) {
