@@ -1,3 +1,4 @@
 rootProject.name = "eltex"
 include ':app'
+include ':network'
 include ':feature:login'
