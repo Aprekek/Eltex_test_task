@@ -1,0 +1,4 @@
+ext.Plugins = [
+	ANDROID_APPLICATION: "com.android.application",
+	ANDROID_LIBRARY    : "com.android.library"
+]
