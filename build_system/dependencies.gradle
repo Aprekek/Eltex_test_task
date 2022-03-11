@@ -1,18 +1,22 @@
 apply from: 'build_system/versions.gradle'
 ext.Dependencies = [
-	GRADLE                 : "com.android.tools.build:gradle:${Versions.GRADLE}",
+	GRADLE             : "com.android.tools.build:gradle:${Versions.GRADLE}",
 
-	LIFECYCLE_VIEWMODEL    : "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.LIFECYCLE}",
-	LIFECYCLE_RUNTIME      : "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.LIFECYCLE}",
+	LIFECYCLE_VIEWMODEL: "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.LIFECYCLE}",
+	LIFECYCLE_RUNTIME  : "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.LIFECYCLE}",
 
-	RETROFIT               : "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}",
-	RETROFIT_MOSHI         : "com.squareup.retrofit2:converter-moshi:${Versions.RETROFIT}",
+	RETROFIT           : "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}",
+	RETROFIT_MOSHI     : "com.squareup.retrofit2:converter-moshi:${Versions.RETROFIT}",
 
-	MATERIAL               : "com.google.android.material:material:${Versions.MATERIAL}",
-	ANDROIDX_CORE          : "androidx.core:core-ktx:${Versions.ANDROIDX_CORE}",
-	APP_COMPAT             : "androidx.appcompat:appcompat:${Versions.APP_COMPAT}",
-	CONSTRAINT_LAYOUT      : "androidx.constraintlayout:constraintlayout:${Versions.CONSTRAINT_LAYOUT}",
+	HILT_ANDROID       : "com.google.dagger:hilt-android:${Versions.HILT}",
+	HILT_COMPILER      : "com.google.dagger:hilt-compiler:${Versions.HILT}",
+	HILT_GRADLE        : "com.google.dagger:hilt-android-gradle-plugin:${Versions.HILT}",
 
-	CICERONE               : "com.github.terrakok:cicerone:${Versions.CICERONE}",
-	FRAGMENT               : "androidx.fragment:fragment-ktx:${Versions.FRAGMENT}",
+	MATERIAL           : "com.google.android.material:material:${Versions.MATERIAL}",
+	ANDROIDX_CORE      : "androidx.core:core-ktx:${Versions.ANDROIDX_CORE}",
+	APP_COMPAT         : "androidx.appcompat:appcompat:${Versions.APP_COMPAT}",
+	CONSTRAINT_LAYOUT  : "androidx.constraintlayout:constraintlayout:${Versions.CONSTRAINT_LAYOUT}",
+
+	CICERONE           : "com.github.terrakok:cicerone:${Versions.CICERONE}",
+	FRAGMENT           : "androidx.fragment:fragment-ktx:${Versions.FRAGMENT}",
 ]

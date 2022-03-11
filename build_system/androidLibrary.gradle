@@ -1,5 +1,7 @@
 apply from: "$rootDir/build_system/configs.gradle"
 
+apply plugin: Plugins.HILT
+
 android {
 	compileSdkVersion Configs.COMPILE_SDK
 	buildToolsVersion Configs.BUILD_TOOL_VERSION
@@ -19,6 +21,10 @@ android {
 		viewBinding true
 	}
 
+	hilt {
+		enableAggregatingTask = true
+	}
+
 	packagingOptions {
 		exclude 'META-INF/*'
 	}
@@ -27,4 +33,9 @@ android {
 		sourceCompatibility JavaVersion.VERSION_1_8
 		targetCompatibility JavaVersion.VERSION_1_8
 	}
+}
+
+dependencies {
+	implementation Dependencies.HILT_ANDROID
+	annotationProcessor Dependencies.HILT_COMPILER
 }
