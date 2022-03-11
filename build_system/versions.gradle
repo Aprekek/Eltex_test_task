@@ -9,4 +9,6 @@ ext.Versions = [
 	CONSTRAINT_LAYOUT: "2.0.4",
 	CICERONE         : "7.1",
 	HILT             : "2.41",
+	RX_JAVA          : "3.1.3",
+	MOSHI            : "1.13.0",
 ]

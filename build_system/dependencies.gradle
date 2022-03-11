@@ -7,6 +7,9 @@ ext.Dependencies = [
 
 	RETROFIT           : "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}",
 	RETROFIT_MOSHI     : "com.squareup.retrofit2:converter-moshi:${Versions.RETROFIT}",
+	RETRIFIT_RX_ADAPTER: "com.squareup.retrofit2:adapter-rxjava3:${Versions.RETROFIT}",
+
+	MOSHI              : "com.squareup.moshi:moshi:${Versions.MOSHI}",
 
 	HILT_ANDROID       : "com.google.dagger:hilt-android:${Versions.HILT}",
 	HILT_COMPILER      : "com.google.dagger:hilt-compiler:${Versions.HILT}",
@@ -19,4 +22,6 @@ ext.Dependencies = [
 
 	CICERONE           : "com.github.terrakok:cicerone:${Versions.CICERONE}",
 	FRAGMENT           : "androidx.fragment:fragment-ktx:${Versions.FRAGMENT}",
+
+	RX_JAVA            : "io.reactivex.rxjava3:rxjava:${Versions.RX_JAVA}",
 ]
