@@ -8,4 +8,5 @@ ext.Versions = [
 	FRAGMENT         : "1.4.1",
 	CONSTRAINT_LAYOUT: "2.0.4",
 	CICERONE         : "7.1",
+	HILT             : "2.41",
 ]
