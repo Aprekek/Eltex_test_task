@@ -7,8 +7,11 @@ dependencies {
 	implementation Dependencies.RETROFIT
 	implementation Dependencies.MATERIAL
 	implementation Dependencies.RX_JAVA
+	implementation Dependencies.RX_ANDROID
 	implementation Dependencies.MOSHI
+	implementation Dependencies.CICERONE
 
 	implementation project(":network")
 	implementation project(":shared:user:token")
+	implementation project(":shared:preferences")
 }
