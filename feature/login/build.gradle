@@ -4,5 +4,11 @@ apply from: "$rootDir/build_system/androidLibrary.gradle"
 
 dependencies {
 
+	implementation Dependencies.RETROFIT
 	implementation Dependencies.MATERIAL
+	implementation Dependencies.RX_JAVA
+	implementation Dependencies.MOSHI
+
+	implementation project(":network")
+	implementation project(":shared:user:token")
 }
