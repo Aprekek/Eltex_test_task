@@ -1,3 +1,8 @@
 apply plugin: Plugins.ANDROID_LIBRARY
 
 apply from: "$rootDir/build_system/androidLibrary.gradle"
+
+dependencies {
+
+	implementation project(":shared:user:token")
+}
