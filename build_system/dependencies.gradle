@@ -24,4 +24,5 @@ ext.Dependencies = [
 	FRAGMENT           : "androidx.fragment:fragment-ktx:${Versions.FRAGMENT}",
 
 	RX_JAVA            : "io.reactivex.rxjava3:rxjava:${Versions.RX_JAVA}",
+	RX_ANDROID         : "io.reactivex.rxjava3:rxandroid:${Versions.RX_ANDROID}",
 ]

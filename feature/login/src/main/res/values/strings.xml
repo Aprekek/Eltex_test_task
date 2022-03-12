@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="enter">Войти</string>
+	<string name="password">Пароль</string>
+	<string name="username">Имя пользователя</string>
+	<string name="empty_field_error">Поле не должно быть пустым</string>
+	<string name="login_error">Не удалось авторизироваться!</string>
+</resources>

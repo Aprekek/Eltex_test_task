@@ -14,7 +14,7 @@ public class GetTokenUseCase {
 
     private final TokenPreferences preferences;
 
-    Token invoke() {
+    public Token invoke() {
         return preferences.getToken();
     }
 }
