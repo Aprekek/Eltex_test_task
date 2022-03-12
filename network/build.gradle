@@ -3,4 +3,8 @@ apply plugin: Plugins.ANDROID_LIBRARY
 apply from: "$rootDir/build_system/androidLibrary.gradle"
 
 dependencies {
+
+	implementation Dependencies.RETROFIT
+	implementation Dependencies.RETROFIT_MOSHI
+	implementation Dependencies.RETRIFIT_RX_ADAPTER
 }
