@@ -5,6 +5,10 @@ apply from: "$rootDir/build_system/androidApplication.gradle"
 dependencies {
 
 	implementation Dependencies.MATERIAL
+	implementation Dependencies.CICERONE
 
 	implementation project(":network")
+	implementation project(":feature:login")
+	implementation project(":shared:user:token")
+	implementation project(":shared:preferences")
 }
