@@ -1,5 +1,6 @@
 ext.Plugins = [
 	ANDROID_APPLICATION: "com.android.application",
 	ANDROID_LIBRARY    : "com.android.library",
-	HILT               : 'dagger.hilt.android.plugin'
+	HILT               : 'dagger.hilt.android.plugin',
+	JAVA_LIBRARY       : "java-library",
 ]
