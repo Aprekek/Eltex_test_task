@@ -3,4 +3,15 @@ apply plugin: Plugins.ANDROID_LIBRARY
 apply from: "$rootDir/build_system/androidLibrary.gradle"
 
 dependencies {
+
+	implementation Dependencies.MATERIAL
+	implementation Dependencies.RX_JAVA
+	implementation Dependencies.RX_ANDROID
+	implementation Dependencies.CICERONE
+	implementation Dependencies.RETROFIT
+	implementation Dependencies.MOSHI
+
+	implementation project(":network")
+	implementation project(":shared:preferences")
+	implementation project(":shared:user:token")
 }

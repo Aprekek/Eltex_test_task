@@ -9,6 +9,7 @@ dependencies {
 
 	implementation project(":network")
 	implementation project(":feature:login")
+	implementation project(":feature:userinfo")
 	implementation project(":shared:user:token")
 	implementation project(":shared:preferences")
 }

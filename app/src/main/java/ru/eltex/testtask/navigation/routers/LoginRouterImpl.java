@@ -5,6 +5,8 @@ import com.github.terrakok.cicerone.Router;
 import javax.inject.Inject;
 
 import ru.eltex.testtask.feature.login.presentation.LoginRouter;
+import ru.eltex.testtask.feature.userinfo.UserInfoScreen;
+import ru.eltex.testtask.shared.user.token.entites.Token;
 
 public class LoginRouterImpl implements LoginRouter {
 
@@ -16,7 +18,7 @@ public class LoginRouterImpl implements LoginRouter {
     private final Router router;
 
     @Override
-    public void navigateToUserInfoScreen() {
-        // TODO
+    public void navigateToUserInfoScreen(Token token) {
+        router.newRootScreen(UserInfoScreen.get(token));
     }
 }
