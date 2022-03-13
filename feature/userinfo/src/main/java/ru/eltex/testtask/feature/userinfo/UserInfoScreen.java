@@ -12,7 +12,7 @@ public class UserInfoScreen {
     static public FragmentScreen get(Token token) {
         return FragmentScreen.Companion.invoke(
                 null,
-                false,
+                true,
                 fragmentFactory -> UserInfoFragment.getInstance(token)
         );
     }

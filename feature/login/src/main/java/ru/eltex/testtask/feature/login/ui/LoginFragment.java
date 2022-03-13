@@ -148,4 +148,10 @@ public class LoginFragment extends Fragment {
 
         void onTextChanged(String s);
     }
+
+    @Override
+    public void onDestroy() {
+        binding = null;
+        super.onDestroy();
+    }
 }
