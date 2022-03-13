@@ -11,22 +11,35 @@ import androidx.lifecycle.ViewModel;
 import dagger.hilt.android.lifecycle.HiltViewModel;
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.disposables.Disposable;
+import retrofit2.HttpException;
 import ru.eltex.testtask.feature.userinfo.domain.usecase.GetUserInfoUseCase;
 import ru.eltex.testtask.feature.userinfo.presentation.states.UserInfoState;
+import ru.eltex.testtask.shared.preferences.usecases.DeleteTokenUseCase;
 import ru.eltex.testtask.shared.user.token.entites.Token;
 
 @HiltViewModel
 public class UserInfoViewModel extends ViewModel {
 
     @Inject
-    public UserInfoViewModel(GetUserInfoUseCase getUserInfoUseCase) {
+    public UserInfoViewModel(
+            UserInfoRouter router,
+            DeleteTokenUseCase deleteTokenUseCase,
+            GetUserInfoUseCase getUserInfoUseCase
+    ) {
+        this.router = router;
+        this.deleteTokenUseCase = deleteTokenUseCase;
         this.getUserInfoUseCase = getUserInfoUseCase;
     }
+
+    private static final int AUTHORIZATION_ERROR_CORE = 401;
 
     private boolean isWasInitialized = false;
     private Disposable disposable = null;
 
+    private final UserInfoRouter router;
+
     private final GetUserInfoUseCase getUserInfoUseCase;
+    private final DeleteTokenUseCase deleteTokenUseCase;
 
     private final MutableLiveData<UserInfoState> state = new MutableLiveData<UserInfoState>(new UserInfoState.InitialState());
     private Token token;
@@ -55,6 +68,13 @@ public class UserInfoViewModel extends ViewModel {
     private void onLoadingError(@NonNull Throwable throwable) {
         Log.d(this.getClass().getName(), throwable.getMessage());
 
+        if (throwable instanceof HttpException) {
+            if (((HttpException) throwable).code() == AUTHORIZATION_ERROR_CORE) {
+                deleteTokenUseCase.invoke();
+                router.navigateToLoginScreen();
+            }
+        }
+
         state.setValue(new UserInfoState.ErrorState());
     }
 
@@ -62,7 +82,7 @@ public class UserInfoViewModel extends ViewModel {
         return state;
     }
 
-    public boolean isWasInitialized(){
+    public boolean isWasInitialized() {
         return isWasInitialized;
     }
 

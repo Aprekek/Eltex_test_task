@@ -25,4 +25,8 @@ public class TokenPreferences {
     public void safeToken(@NonNull Token token) {
         preferences.edit().putString(TOKEN_KEY, token.getAccessToken()).apply();
     }
+
+    public void deleteToken() {
+        preferences.edit().remove(TOKEN_KEY).apply();
+    }
 }
