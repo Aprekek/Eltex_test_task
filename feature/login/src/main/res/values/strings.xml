@@ -5,4 +5,5 @@
 	<string name="username">Имя пользователя</string>
 	<string name="empty_field_error">Поле не должно быть пустым</string>
 	<string name="login_error">Не удалось авторизироваться!</string>
+	<string name="login_title">Вход</string>
 </resources>

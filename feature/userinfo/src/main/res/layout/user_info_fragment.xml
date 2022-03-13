@@ -1,93 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:paddingHorizontal="15dp">
+	android:orientation="vertical">
 
-	<ProgressBar
-		android:id="@+id/progress_bar"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_gravity="center"/>
-
-	<LinearLayout
-		android:id="@+id/loading_error_message"
+	<com.google.android.material.appbar.MaterialToolbar
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_gravity="center"
-		android:visibility="gone"
-		android:orientation="vertical"
-		tools:visibility="visible">
+		android:layout_height="?attr/actionBarSize"
+		app:title="@string/about_user"
+		style="@style/Theme.Eltex.Toolbar"/>
 
-		<TextView
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_gravity="center"
-			android:text="@string/loading_error_message"/>
-
-		<TextView
-			android:id="@+id/reload_text"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_gravity="center"
-			android:layout_marginTop="15dp"
-			android:clickable="true"
-			android:focusable="true"
-			android:text="@string/repeat"/>
-	</LinearLayout>
-
-	<LinearLayout
-		android:id="@+id/user_info_content"
+	<FrameLayout
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		android:visibility="gone"
-		android:orientation="vertical"
-		tools:visibility="visible">
+		android:paddingHorizontal="@dimen/medium_margin_padding">
 
-		<TextView
-			android:id="@+id/role_id"
+		<ProgressBar
+			android:id="@+id/progress_bar"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:paddingTop="10dp"
-			android:textSize="18sp"
-			android:textColor="#000000"
-			tools:text="role_id: Role"/>
+			android:layout_gravity="center"/>
 
-		<TextView
-			android:id="@+id/user_name"
-			android:layout_width="wrap_content"
+		<LinearLayout
+			android:id="@+id/loading_error_message"
+			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:paddingTop="10dp"
-			android:textSize="18sp"
-			android:textColor="#000000"
-			tools:text="username: UserName"/>
+			android:layout_gravity="center"
+			android:visibility="gone"
+			android:orientation="vertical"
+			tools:visibility="visible">
 
-		<TextView
-			android:id="@+id/email"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:textSize="18sp"
-			android:paddingTop="10dp"
-			android:textColor="#000000"
-			tools:text="email: Some@email.com"/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:text="@string/loading_error_message"
+				style="@style/Theme.Eltex.DescriptionText"/>
 
-		<TextView
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:paddingTop="10dp"
-			android:textStyle="bold"
-			android:textSize="18sp"
-			android:textColor="#000000"
-			android:text="@string/permissions"/>
+			<TextView
+				android:id="@+id/reload_text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_marginTop="@dimen/medium_margin_padding"
+				android:clickable="true"
+				android:focusable="true"
+				android:textColor="@color/blue"
+				android:text="@string/repeat"
+				style="@style/Theme.Eltex.DescriptionText"/>
+		</LinearLayout>
 
-		<androidx.recyclerview.widget.RecyclerView
-			android:id="@+id/recycler_view"
+		<LinearLayout
+			android:id="@+id/user_info_content"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
-			android:paddingTop="5dp"
-			app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
-	</LinearLayout>
-</FrameLayout>
+			android:visibility="gone"
+			android:orientation="vertical"
+			tools:visibility="visible">
+
+			<TextView
+				android:id="@+id/role_id"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingTop="@dimen/small_margin_padding"
+				tools:text="role_id: Role"
+				style="@style/Theme.Eltex.DescriptionText"/>
+
+			<TextView
+				android:id="@+id/user_name"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingTop="@dimen/small_margin_padding"
+				tools:text="username: UserName"
+				style="@style/Theme.Eltex.DescriptionText"/>
+
+			<TextView
+				android:id="@+id/email"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingTop="@dimen/small_margin_padding"
+				tools:text="email: Some@email.com"
+				style="@style/Theme.Eltex.DescriptionText"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingTop="@dimen/small_margin_padding"
+				android:textStyle="bold"
+				android:text="@string/permissions"
+				style="@style/Theme.Eltex.DescriptionText"/>
+
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/recycler_view"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:paddingTop="@dimen/very_small_margin_padding"
+				app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+		</LinearLayout>
+	</FrameLayout>
+</LinearLayout>
