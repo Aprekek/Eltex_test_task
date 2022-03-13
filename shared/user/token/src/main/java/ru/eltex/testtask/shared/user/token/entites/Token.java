@@ -1,6 +1,8 @@
 package ru.eltex.testtask.shared.user.token.entites;
 
-public class Token {
+import java.io.Serializable;
+
+public class Token implements Serializable {
 
     public Token(String accessToken) {
         this.accessToken = accessToken;
