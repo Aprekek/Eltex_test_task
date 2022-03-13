@@ -90,10 +90,12 @@ public class LoginViewModel extends ViewModel {
 
     public void onUserNameTextChanged(String useName) {
         userNameLiveData.setValue(useName);
+        userNameError.setValue(false);
     }
 
     public void onPasswordChanged(String password) {
         passwordLiveData.setValue(password);
+        passwordError.setValue(false);
     }
 
     public LiveData<String> getUserNameLiveData() {
