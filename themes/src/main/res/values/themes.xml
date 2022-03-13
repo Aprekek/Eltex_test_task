@@ -1,0 +1,12 @@
+<resources>
+	<style name="Theme.Eltex"
+		parent="Theme.Eltex.Base">
+		<item name="android:statusBarColor">?attr/colorPrimary</item>
+	</style>
+
+	<style name="Theme.Eltex.Base"
+		parent="Theme.MaterialComponents.DayNight.NoActionBar">
+		<item name="colorPrimary">@color/blue_main</item>
+		<item name="colorOnPrimary">@color/white</item>
+	</style>
+</resources>
