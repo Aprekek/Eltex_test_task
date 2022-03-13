@@ -8,6 +8,7 @@ ext.Dependencies = [
 	RETROFIT           : "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}",
 	RETROFIT_MOSHI     : "com.squareup.retrofit2:converter-moshi:${Versions.RETROFIT}",
 	RETRIFIT_RX_ADAPTER: "com.squareup.retrofit2:adapter-rxjava3:${Versions.RETROFIT}",
+	HTTP_INTERCEPTOR   : "com.squareup.okhttp3:logging-interceptor:${Versions.HTTP_INTERCEPTOR}",
 
 	MOSHI              : "com.squareup.moshi:moshi:${Versions.MOSHI}",
 
