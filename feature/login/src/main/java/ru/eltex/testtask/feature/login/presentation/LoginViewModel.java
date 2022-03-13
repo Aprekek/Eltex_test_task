@@ -13,6 +13,7 @@ import io.reactivex.rxjava3.disposables.Disposable;
 import ru.eltex.testtask.feature.login.domain.entites.UserLoginEntity;
 import ru.eltex.testtask.feature.login.domain.usecases.LoginUserUseCase;
 import ru.eltex.testtask.shared.preferences.usecases.SaveTokenUseCase;
+import ru.eltex.testtask.shared.user.token.entites.Token;
 
 @HiltViewModel
 public class LoginViewModel extends ViewModel {
@@ -74,7 +75,7 @@ public class LoginViewModel extends ViewModel {
                 .subscribe(
                         token -> {
                             saveTokenUseCase.invoke(token);
-                            navigateToUserInfoScreen();
+                            navigateToUserInfoScreen(token);
                         },
                         throwable -> {
                             Log.d(this.getClass().getName(), throwable.getMessage());
@@ -83,8 +84,8 @@ public class LoginViewModel extends ViewModel {
                 );
     }
 
-    private void navigateToUserInfoScreen() {
-        router.navigateToUserInfoScreen();
+    private void navigateToUserInfoScreen(Token token) {
+        router.navigateToUserInfoScreen(token);
     }
 
     public void onUserNameTextChanged(String useName) {
