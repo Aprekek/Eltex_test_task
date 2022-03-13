@@ -3,6 +3,8 @@ package ru.eltex.testtask.di.modules;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import javax.inject.Singleton;
+
 import androidx.annotation.NonNull;
 import dagger.Module;
 import dagger.Provides;
@@ -15,6 +17,7 @@ import dagger.hilt.components.SingletonComponent;
 public class ContextModule {
 
     @Provides
+    @Singleton
     public SharedPreferences providesSharedPreferences(@NonNull @ApplicationContext Context context) {
         return context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
     }
