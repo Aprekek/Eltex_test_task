@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="Theme.Eltex.TextInputLayout"
+		parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+		<item name="cornerRadius">@dimen/small_radius</item>
+	</style>
+</resources>
