@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputLayout;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -80,7 +82,7 @@ public class LoginFragment extends Fragment {
         viewModel.getUserNameError().observe(
                 getViewLifecycleOwner(),
                 isError -> compareAndSetError(
-                        binding.usernameEditText,
+                        binding.usernameInputLayout,
                         getResources().getString(R.string.empty_field_error),
                         isError
                 )
@@ -88,7 +90,7 @@ public class LoginFragment extends Fragment {
         viewModel.getPasswordError().observe(
                 getViewLifecycleOwner(),
                 isError -> compareAndSetError(
-                        binding.passwordEditText,
+                        binding.passwordInputLayout,
                         getResources().getString(R.string.empty_field_error),
                         isError
                 )
@@ -105,14 +107,14 @@ public class LoginFragment extends Fragment {
     }
 
     private void compareAndSetError(
-            @NonNull EditText editText,
+            @NonNull TextInputLayout textInputLayout,
             String errorMessage,
             boolean isError
     ) {
         if (isError) {
-            editText.setError(errorMessage);
+            textInputLayout.setError(errorMessage);
         } else {
-            editText.setError(null);
+            textInputLayout.setError(null);
         }
     }
 

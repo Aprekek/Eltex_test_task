@@ -19,10 +19,12 @@
 		android:paddingVertical="@dimen/medium_margin_padding">
 
 		<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/username_input_layout"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_marginTop="@dimen/large_margin_padding"
 			android:hint="@string/username"
+			app:errorEnabled="true"
 			style="@style/Theme.Eltex.TextInputLayout">
 			<com.google.android.material.textfield.TextInputEditText
 				android:id="@+id/username_edit_text"
@@ -33,10 +35,12 @@
 		</com.google.android.material.textfield.TextInputLayout>
 
 		<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/password_input_layout"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_marginTop="@dimen/large_margin_padding"
 			android:hint="@string/password"
+			app:errorEnabled="true"
 			app:passwordToggleEnabled="true"
 			style="@style/Theme.Eltex.TextInputLayout">
 			<com.google.android.material.textfield.TextInputEditText
