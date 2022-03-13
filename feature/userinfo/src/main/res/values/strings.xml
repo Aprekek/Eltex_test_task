@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="role_id">role_id:</string>
+	<string name="user_name">username:</string>
+	<string name="email">email:</string>
+	<string name="permissions">permissions:</string>
+	<string name="loading_error_message">Неудалось загрузить данные!</string>
+	<string name="repeat">Повторить</string>
+	<string name="not_found_sign">—</string>
+</resources>
