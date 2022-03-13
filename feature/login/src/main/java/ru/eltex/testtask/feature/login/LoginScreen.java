@@ -11,7 +11,7 @@ public class LoginScreen {
     static public FragmentScreen get() {
         return FragmentScreen.Companion.invoke(
                 null,
-                false,
+                true,
                 fragmentFactory -> LoginFragment.getInstance()
         );
     }
