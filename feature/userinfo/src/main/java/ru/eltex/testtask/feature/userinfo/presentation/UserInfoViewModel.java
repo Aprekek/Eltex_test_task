@@ -72,9 +72,15 @@ public class UserInfoViewModel extends ViewModel {
             if (((HttpException) throwable).code() == AUTHORIZATION_ERROR_CORE) {
                 deleteTokenUseCase.invoke();
                 router.navigateToLoginScreen();
+            } else {
+                setErrorState();
             }
+        } else {
+            setErrorState();
         }
+    }
 
+    private void setErrorState() {
         state.setValue(new UserInfoState.ErrorState());
     }
 
