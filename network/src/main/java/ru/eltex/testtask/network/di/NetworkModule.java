@@ -8,6 +8,8 @@ import dagger.Module;
 import dagger.Provides;
 import dagger.hilt.InstallIn;
 import dagger.hilt.components.SingletonComponent;
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory;
 import retrofit2.converter.moshi.MoshiConverterFactory;
@@ -30,6 +32,11 @@ public class NetworkModule {
                 .baseUrl("http://smart.eltex-co.ru:8271/api/v1/")
                 .addConverterFactory(MoshiConverterFactory.create(moshi))
                 .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
+                .client(new OkHttpClient
+                        .Builder()
+                        .addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
+                        .build()
+                )
                 .build();
     }
 }

@@ -4,6 +4,7 @@ ext.Versions = [
 	APP_COMPAT       : "1.4.1",
 	LIFECYCLE        : "2.4.1",
 	RETROFIT         : "2.9.0",
+	HTTP_INTERCEPTOR : "4.9.3",
 	MATERIAL         : "1.5.0",
 	FRAGMENT         : "1.4.1",
 	CONSTRAINT_LAYOUT: "2.0.4",

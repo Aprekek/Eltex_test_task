@@ -7,4 +7,5 @@ dependencies {
 	implementation Dependencies.RETROFIT
 	implementation Dependencies.RETROFIT_MOSHI
 	implementation Dependencies.RETRIFIT_RX_ADAPTER
+	implementation Dependencies.HTTP_INTERCEPTOR
 }
