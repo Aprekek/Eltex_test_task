@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="Theme.Eltex.DescriptionText">
+		<item name="android:textSize">@dimen/description_text_size</item>
+		<item name="android:textColor">?attr/colorOnSurface</item>
+	</style>
+</resources>

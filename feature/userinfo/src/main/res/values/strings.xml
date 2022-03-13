@@ -7,4 +7,5 @@
 	<string name="loading_error_message">Неудалось загрузить данные!</string>
 	<string name="repeat">Повторить</string>
 	<string name="not_found_sign">—</string>
+	<string name="about_user">О пользователе</string>
 </resources>

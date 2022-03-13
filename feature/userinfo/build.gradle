@@ -14,4 +14,5 @@ dependencies {
 	implementation project(":network")
 	implementation project(":shared:preferences")
 	implementation project(":shared:user:token")
+	implementation project(":themes")
 }
