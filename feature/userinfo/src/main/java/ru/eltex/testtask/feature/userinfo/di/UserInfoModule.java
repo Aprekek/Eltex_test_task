@@ -24,7 +24,7 @@ public class UserInfoModule {
     }
 
     @Module
-    @InstallIn(SingletonComponent.class)
+    @InstallIn(ViewModelComponent.class)
     interface UserInfoBinds {
         @Binds
         UserInfoDataSource bindUserInfoDataSource(UserInfoDataSourceImpl impl);
